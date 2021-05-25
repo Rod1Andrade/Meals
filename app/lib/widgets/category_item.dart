@@ -1,4 +1,5 @@
 import 'package:app/models/category_model.dart';
+import 'package:app/screens/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 /// @author Rodrigo Andrade
@@ -8,9 +9,19 @@ class CategoryItem extends StatelessWidget {
 
   const CategoryItem(this.categoryModel);
 
+  /// Navigator to detailed Category Meals
+  ///
+  /// @param BuildContext context
+  void _navigatorToCategoryMealsScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => CategoryMealScreen(),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () => _navigatorToCategoryMealsScreen(context),
       child: Card(
         elevation: 5.0,
         clipBehavior: Clip.antiAlias,
@@ -29,10 +40,9 @@ class CategoryItem extends StatelessWidget {
                 categoryModel.subtitle,
                 textAlign: TextAlign.left,
                 style: Theme.of(context).textTheme.caption.copyWith(
-                  fontSize: 11,
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w400
-                ),
+                    fontSize: 11,
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400),
               ),
               title: Text(categoryModel.title,
                   style: Theme.of(context).textTheme.subtitle1.copyWith(
