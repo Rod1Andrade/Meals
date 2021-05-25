@@ -39,15 +39,24 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+  # To add assets to your application, add an assets section, like this:
+  assets:
+     - assets/images/food/breakfast.jpg
+     - assets/images/food/burger.jpg
+     - assets/images/food/exotic.jpg
+     - assets/images/food/fast.jpg
+     - assets/images/food/french.jpg
+     - assets/images/food/germany.jpg
+     - assets/images/food/italian.jpg
+     - assets/images/food/japanese.jpg
+     - assets/images/food/summer.jpg
+     - assets/images/food/healthy.jpg
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

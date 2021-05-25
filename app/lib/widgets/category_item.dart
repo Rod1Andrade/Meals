@@ -12,15 +12,36 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Card(
-        margin: const EdgeInsets.all(10.0),
-        color: categoryModel.color,
         elevation: 5.0,
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Text(categoryModel.title,
-              style: Theme.of(context).textTheme.headline5,
-        ),
+        clipBehavior: Clip.antiAlias,
+        child: Stack(alignment: Alignment.bottomCenter, children: [
+          Image.asset(
+            categoryModel.imagePath,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          Container(
+            color: Colors.black.withOpacity(.9),
+            child: ListTile(
+              visualDensity: VisualDensity.compact,
+              subtitle: Text(
+                categoryModel.subtitle,
+                textAlign: TextAlign.left,
+                style: Theme.of(context).textTheme.caption.copyWith(
+                  fontSize: 11,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w400
+                ),
+              ),
+              title: Text(categoryModel.title,
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(
+                        color: Colors.white,
+                      )),
+            ),
+          ),
+        ]),
       ),
-    ));
+    );
   }
 }
