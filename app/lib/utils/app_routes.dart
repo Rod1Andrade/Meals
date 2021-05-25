@@ -3,4 +3,5 @@
 class AppRoutes {
   static const String HOME = '/';
   static const String CATEGORY_MEAL = '/category-meal';
+  static const String MEAL_DETAIL = '/meal-detail';
 }

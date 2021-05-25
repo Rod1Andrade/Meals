@@ -1,4 +1,5 @@
 import 'package:app/models/meal_model.dart';
+import 'package:app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 /// Componente de renderização do item de refeição
@@ -10,12 +11,17 @@ class MealItem extends StatelessWidget {
 
   const MealItem(this.mealModel);
 
-  void _selectedMeal() {}
+  void _navigatorToDetailedMeal(BuildContext context) {
+    Navigator.of(context).pushNamed(
+      AppRoutes.MEAL_DETAIL,
+      arguments: mealModel,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: _selectedMeal,
+      onTap: () => _navigatorToDetailedMeal(context),
       child: Card(
         elevation: 4,
         margin: const EdgeInsets.all(10.0),
