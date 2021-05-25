@@ -1,6 +1,7 @@
 import 'package:app/data/dummy_data.dart';
 import 'package:app/models/category_model.dart';
 import 'package:app/models/meal_model.dart';
+import 'package:app/widgets/meal_item.dart';
 import 'package:flutter/material.dart';
 
 /// Lista de receitas por categoria.
@@ -28,7 +29,7 @@ class CategoryMealScreen extends StatelessWidget {
         itemCount: meals.length,
         itemBuilder: (context, index) {
           MealModel mealModel = meals[index];
-          return Text(mealModel.title);
+          return MealItem(mealModel);
         },
       ),
     );
