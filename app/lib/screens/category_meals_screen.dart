@@ -4,12 +4,11 @@ import 'package:flutter/material.dart';
 /// @author Rodrigo Andrade
 /// @since 25/05/2021
 class CategoryMealScreen extends StatelessWidget {
-  final CategoryModel categoryModel;
-
-  const CategoryMealScreen(this.categoryModel);
-
   @override
   Widget build(BuildContext context) {
+    final CategoryModel categoryModel =
+        ModalRoute.of(context).settings.arguments as CategoryModel;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryModel.title),
