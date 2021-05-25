@@ -1,5 +1,6 @@
 import 'package:app/enums/complexity.dart';
 import 'package:app/enums/cost.dart';
+import 'package:app/utils/app_messages.dart';
 import 'package:flutter/foundation.dart';
 
 /// @author Rodrigo Andrade
@@ -34,4 +35,30 @@ class MealModel {
     @required this.isVegetarian,
     @required this.isLactoseFree,
   });
+
+  String get complexityValue {
+    switch (complexity) {
+      case Complexity.Simple:
+        return AppMessages.LABEL_SIMPLES;
+      case Complexity.Medium:
+        return AppMessages.LABEL_MEDIUM;
+      case Complexity.Difficult:
+        return AppMessages.LABEL_HARD;
+      default:
+        return '';
+    }
+  }
+
+  String get costValue {
+    switch (cost) {
+      case Cost.Cheap:
+        return AppMessages.LABEL_CHEAP;
+      case Cost.Fair:
+        return AppMessages.LABEL_FAIR;
+      case Cost.Expensive:
+        return AppMessages.LABEL_EXPENSIVE;
+      default:
+        return '';
+    }
+  }
 }
