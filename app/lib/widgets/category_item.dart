@@ -2,6 +2,9 @@ import 'package:app/models/category_model.dart';
 import 'package:app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
+/// Card que contem uma imagem, titulo e subtitulo referente
+/// a categoria da refeicao.
+///
 /// @author Rodrigo Andrade
 /// @since 25/05/2021
 class CategoryItem extends StatelessWidget {

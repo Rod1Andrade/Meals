@@ -1,6 +1,8 @@
 import 'package:app/models/category_model.dart';
 import 'package:flutter/material.dart';
 
+/// Lista de receitas por categoria.
+///
 /// @author Rodrigo Andrade
 /// @since 25/05/2021
 class CategoryMealScreen extends StatelessWidget {
