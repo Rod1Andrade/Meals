@@ -1,5 +1,7 @@
 import 'package:app/screens/categories_screen.dart';
 import 'package:app/screens/category_meals_screen.dart';
+import 'package:app/utils/app_messages.dart';
+import 'package:app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(Meals());
@@ -13,13 +15,12 @@ class Meals extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.amber
-      ),
-      title: 'Meals',
-      home: CategoriesScreen(),
+      theme: ThemeData(primarySwatch: Colors.amber),
+      title: AppMessages.APP_TITLE,
+      initialRoute: AppRoutes.HOME,
       routes: {
-        '/category-meal': (context) => CategoryMealScreen(),
+        AppRoutes.HOME: (context) => CategoriesScreen(),
+        AppRoutes.CATEGORY_MEAL: (context) => CategoryMealScreen(),
       },
     );
   }

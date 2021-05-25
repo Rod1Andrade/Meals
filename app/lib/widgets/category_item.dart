@@ -1,5 +1,5 @@
 import 'package:app/models/category_model.dart';
-import 'package:app/screens/category_meals_screen.dart';
+import 'package:app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 /// @author Rodrigo Andrade
@@ -14,7 +14,7 @@ class CategoryItem extends StatelessWidget {
   /// @param BuildContext context
   void _navigatorToCategoryMealsScreen(BuildContext context) {
     Navigator.of(context).pushNamed(
-      '/category-meal',
+      AppRoutes.CATEGORY_MEAL,
       arguments: categoryModel,
     );
   }

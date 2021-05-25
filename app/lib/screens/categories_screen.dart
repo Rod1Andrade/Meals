@@ -1,4 +1,5 @@
 import 'package:app/data/dummy_data.dart';
+import 'package:app/utils/app_messages.dart';
 import 'package:app/widgets/category_item.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Vamos cozinhar?'),
+        title: Text(AppMessages.TITLE_LETS_COOK),
       ),
       body: GridView(
         padding: const EdgeInsets.all(15),
