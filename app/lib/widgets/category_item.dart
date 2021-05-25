@@ -14,7 +14,7 @@ class CategoryItem extends StatelessWidget {
   /// @param BuildContext context
   void _navigatorToCategoryMealsScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (_) => CategoryMealScreen(),
+      builder: (_) => CategoryMealScreen(categoryModel),
     ));
   }
 
