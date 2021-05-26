@@ -34,25 +34,7 @@ class MealDetailScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline6,
               ),
             ),
-            Container(
-              margin: const EdgeInsets.only(top: 10, bottom: 10),
-              padding: const EdgeInsets.all(10.0),
-              width: 300,
-              constraints: BoxConstraints(
-                maxHeight: 187,
-                minWidth: 50,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                  color: Colors.grey,
-                  width: .9,
-                ),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15.0),
-                  topRight: Radius.circular(15.0),
-                ),
-              ),
+            _CardContainer(
               child: ListView.builder(
                 itemCount: mealModel.ingredients.length,
                 itemBuilder: (context, index) {
@@ -72,9 +54,63 @@ class MealDetailScreen extends StatelessWidget {
                 },
               ),
             ),
+            Container(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                AppMessages.TITLE_STEPS,
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ),
+            _CardContainer(
+              child: ListView.builder(
+                itemCount: mealModel.steps.length,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      ListTile(
+                        leading: CircleAvatar(
+                          child: Text('${index + 1}'),
+                        ),
+                        title: Text( mealModel.steps[index]),
+                      ),
+                      Divider(),
+                    ],
+                  );
+                },
+              ),
+            )
           ],
         ),
       ),
+    );
+  }
+}
+
+/// Card Container
+class _CardContainer extends StatelessWidget {
+  const _CardContainer({Key key, @required this.child}) : super(key: key);
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 10, bottom: 10),
+      padding: const EdgeInsets.all(10.0),
+      width: MediaQuery.of(context).size.width * .9,
+      constraints: BoxConstraints(
+        maxHeight: 187,
+        minWidth: 50,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(
+          color: Colors.grey,
+          width: .9,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+      ),
+      child: child,
     );
   }
 }

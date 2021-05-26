@@ -5,6 +5,7 @@ class AppMessages {
 
   static const String TITLE_LETS_COOK = 'Vamos cozinhar?';
   static const String TITLE_INGREDIENTS = 'Ingredientes';
+  static const String TITLE_STEPS = 'Passos';
 
   static const String LABEL_SIMPLES = 'Simples';
   static const String LABEL_MEDIUM = 'Normal';
