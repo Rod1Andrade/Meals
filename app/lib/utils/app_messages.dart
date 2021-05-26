@@ -8,6 +8,9 @@ class AppMessages {
   static const String TITLE_INGREDIENTS = 'Ingredientes';
   static const String TITLE_STEPS = 'Passos';
 
+
+  static const String LABEL_MEALS = 'Refeições';
+  static const String LABEL_CONFIGS = 'Configurações';
   static const String LABEL_SIMPLES = 'Simples';
   static const String LABEL_MEDIUM = 'Normal';
   static const String LABEL_HARD = 'Difícil';
