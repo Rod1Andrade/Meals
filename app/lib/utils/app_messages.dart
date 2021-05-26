@@ -4,6 +4,7 @@ class AppMessages {
   static const String APP_TITLE = 'Meals';
 
   static const String TITLE_LETS_COOK = 'Vamos cozinhar?';
+  static const String TITLE_FAVORITES = 'Refeições favoritas';
   static const String TITLE_INGREDIENTS = 'Ingredientes';
   static const String TITLE_STEPS = 'Passos';
 
@@ -13,4 +14,6 @@ class AppMessages {
   static const String LABEL_CHEAP = 'Barato';
   static const String LABEL_FAIR = 'Justo';
   static const String LABEL_EXPENSIVE = 'Caro';
+  static const String LABEL_CATEGORIES = 'Categorias';
+  static const String LABEL_FAVORITES = 'Favorites';
 }

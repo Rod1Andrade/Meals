@@ -6,10 +6,13 @@ import 'package:flutter/material.dart';
 /// @since 25/05/2021
 class FavoritesMealScreen extends StatelessWidget{
 
+  const FavoritesMealScreen();
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text('Favoritas :D'),
     );
   }
+
 }
