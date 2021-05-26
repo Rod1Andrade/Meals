@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 ///
 /// @author Rodrigo Andrade
 /// @since 25/05/2021
-class TabViewScreen extends StatefulWidget {
-  const TabViewScreen({Key key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key key}) : super(key: key);
 
   @override
-  _TabViewScreenState createState() => _TabViewScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _TabViewScreenState extends State<TabViewScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndexWidget = 0;
 
   static const List<String> _titles = const [
