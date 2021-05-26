@@ -1,3 +1,4 @@
+import 'package:app/models/meal_model.dart';
 import 'package:app/screens/categories_screen.dart';
 import 'package:app/screens/favorite_meals_screen.dart';
 import 'package:app/utils/app_messages.dart';
@@ -10,7 +11,9 @@ import 'package:flutter/material.dart';
 /// @author Rodrigo Andrade
 /// @since 25/05/2021
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  final List<MealModel> favoriteMeals;
+
+  const HomeScreen({this.favoriteMeals});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -25,10 +28,17 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   // Widgets Opicionais com base na appbar
-  static const List<Widget> _widgetOptions = const [
-    CategoriesScreen(),
-    FavoritesMealScreen(),
-  ];
+  List<Widget> _widgetOptions = [];
+
+  @override
+  void initState() {
+    super.initState();
+    // Widgets TabView
+    _widgetOptions = [
+      CategoriesScreen(),
+      FavoritesMealScreen(favoriteMeals: widget.favoriteMeals),
+    ];
+  }
 
   void _onItemTapped(int index) {
     setState(() {

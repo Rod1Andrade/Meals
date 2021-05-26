@@ -4,7 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MealDetailScreen extends StatelessWidget {
-  const MealDetailScreen({Key key}) : super(key: key);
+  final void Function(MealModel mealModel) onFavorited;
+  final bool Function(MealModel mealModel) isFavorite;
+
+  const MealDetailScreen({
+    this.onFavorited,
+    this.isFavorite,
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +78,7 @@ class MealDetailScreen extends StatelessWidget {
                         leading: CircleAvatar(
                           child: Text('${index + 1}'),
                         ),
-                        title: Text( mealModel.steps[index]),
+                        title: Text(mealModel.steps[index]),
                       ),
                       Divider(),
                     ],
@@ -81,6 +88,13 @@ class MealDetailScreen extends StatelessWidget {
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          onFavorited(mealModel);
+        },
+        child:
+            isFavorite(mealModel) ?  Icon(Icons.star) : Icon(Icons.star_border),
       ),
     );
   }

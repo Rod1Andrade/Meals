@@ -29,4 +29,6 @@ class AppMessages {
   static const String SUBTITLE_VEGETARIAN = 'Refeições vegetarianas.';
   static const String SUBTITLE_VEGAN = 'Refeições veganas.';
 
+  static const String MESSAGE_NO_MEALS_FAVORITED =
+      'Nenhuma refeição favoritada.';
 }
