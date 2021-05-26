@@ -25,7 +25,7 @@ class _MealsState extends State<Meals> {
   List<MealModel> _avaliableMeals = DUMMY_MEALS;
 
   // Modelo de configuracao
-  final SettingsModel _settingsModel = SettingsModel();
+  SettingsModel _settingsModel = SettingsModel();
 
   // Aplica os filtros com base nos dados de configuracao
   void _applyFilters(SettingsModel settingsModel) {
