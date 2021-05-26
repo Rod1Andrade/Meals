@@ -1,7 +1,7 @@
 # Meals
 ## Flutter Learn
 
-<img src="https://img.shields.io/badge/Framework-Flutter-blue">
+<img src="https://img.shields.io/badge/Framework-Flutter-blue"> <img src="https://img.shields.io/badge/Plataforma-Cross--Mobile-orange">
 
 ### Português
 
