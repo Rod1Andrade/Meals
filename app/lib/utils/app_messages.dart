@@ -7,6 +7,7 @@ class AppMessages {
   static const String TITLE_FAVORITES = 'Refeições favoritas';
   static const String TITLE_INGREDIENTS = 'Ingredientes';
   static const String TITLE_STEPS = 'Passos';
+  static const String TITLE_SETTINGS = 'Configurações Alimentar';
 
 
   static const String LABEL_MEALS = 'Refeições';

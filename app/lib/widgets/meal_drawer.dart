@@ -1,4 +1,5 @@
 import 'package:app/utils/app_messages.dart';
+import 'package:app/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 /// Drawer componente
@@ -19,22 +20,28 @@ class MealDrawer extends StatelessWidget {
             width: double.infinity,
             height: MediaQuery.of(context).size.height * .18,
             alignment: Alignment.bottomCenter,
-            child: Text(
-              AppMessages.TITLE_LETS_COOK,
-              style: Theme.of(context).textTheme.headline4.copyWith(
-                fontWeight: FontWeight.bold
-              )
-            ),
+            child: Text(AppMessages.TITLE_LETS_COOK,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    .copyWith(fontWeight: FontWeight.bold)),
           ),
           SizedBox(height: 20),
           ListTile(
             leading: Icon(Icons.restaurant),
             title: Text(AppMessages.LABEL_MEALS),
-            onTap: () {},
-          ),ListTile(
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(AppRoutes.HOME);
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.settings),
             title: Text(AppMessages.LABEL_CONFIGS),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(AppRoutes.SETTINGS);
+            },
           ),
         ],
       ),
