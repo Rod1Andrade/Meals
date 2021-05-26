@@ -1,6 +1,8 @@
 # Meals
 ## Flutter Learn
 
+<img src="https://img.shields.io/badge/Framework-Flutter-blue">
+
 ### Português
 
 Meals é uma aplicação para receitas.  O foco desse módulo é aprender sobre técnicas de navegação.
